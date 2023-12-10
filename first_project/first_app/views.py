@@ -7,4 +7,6 @@ from first_app.models import Topic,webpage,Records
 def index(request):
     webpages_list = Records.objects.order_by('date')
     date_dict = {'Records':webpages_list}    
-    return render(request, '/index.html',context=webpages_list)
+    #return render(request, '/index.html',context=webpages_list)
+    return HttpResponse("Index page")
+
